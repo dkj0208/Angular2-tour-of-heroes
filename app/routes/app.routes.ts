@@ -1,6 +1,7 @@
 import {provideRouter, RouterConfig} from '@angular/router';
 import {HeroesComponent} from '../heroes.component';
 import {DashboardComponent} from '../components/dashboard.component';
+import {HeroDetailComponent} from "../components/hero-detail.component";
 
 const routes: RouterConfig = [
   {
@@ -15,6 +16,10 @@ const routes: RouterConfig = [
     path: '',
     redirectTo: '/dashboard',
     pathMatch: 'full'
+  },
+  {
+    path: 'detail/:id',
+    component: HeroDetailComponent
   }
 ];
 
